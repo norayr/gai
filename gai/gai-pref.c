@@ -968,8 +968,11 @@ gai_pref_get_answers(void)
 
       if((unsigned char*)(((int *)iw[i].result)[0]) != NULL &&
          (unsigned char*)(((int *)iw[i].default_val)[0]) != NULL)
-    (((int *)iw[i].result)[0]) =
-        (((int *)iw[i].default_val)[0]) = g_strdup(buff);
+    //(((int *)iw[i].result)[0]) =
+     //   (((int *)iw[i].default_val)[0]) = g_strdup(buff);
+     (((intptr_t *)iw[i].result)[0]) =
+    (((intptr_t *)iw[i].default_val)[0]) = (intptr_t)g_strdup(buff);
+
 
 
       //printf("%s\n",buff);
