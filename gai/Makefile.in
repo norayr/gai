@@ -19,7 +19,7 @@ LIBDIR = @libdir@
 all: libgai@LIB_END@
 
 libgai@LIB_END@: $(OBJS)
-	$(CC) $(LDFLAGS) $(OBJS) -o libgai@LIB_END@
+	$(CC) $(OBJS) $(LDFLAGS) -o libgai@LIB_END@
 
 install: libgai@LIB_END@
 	mkdir -p $(DESTDIR)$(PREFIX)/include/gai
